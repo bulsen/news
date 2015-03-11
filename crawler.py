@@ -54,12 +54,10 @@ def crawl():
 				if len(a.text) > dicts["buff"]:
 					db.pushc(dicts["db"],str(a.text).encode("utf-8"),link)
 
-"""while 1:
+while 1:
 	crawe = ["00:00","8:42","9:15","11:35","14:00","15:13","18:17","20:13"]
 	if str(time.strftime("%H:%M")) in crawe:
 		crawl()
 		
 	elif str(time.strftime("%M")) =="00":
-		streamfiyat()"""
-crawl()
-streamfiyat()
+		streamfiyat()
