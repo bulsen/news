@@ -12,6 +12,16 @@ def is_link(site,link):
 		return site+link
 
 
+def streamfiyat():
+	data = requests.get("http://www.vatanbilgisayar.com/hp-stream-13-c000nt-celeron-n2840-216ghz-2gb-32gb-ssd-133-int-w81-notebook.html?srt=UP#genel-bakis").text
+
+	bs = bs4.BeautifulSoup(data)
+
+	arr=[]
+	for elems in bs.find_all("span"):
+		arr.append(elems.text)
+
+	db.pushc("streamfiyat",arr[87],"lol")
 
 def crawl():
 
@@ -44,7 +54,12 @@ def crawl():
 				if len(a.text) > dicts["buff"]:
 					db.pushc(dicts["db"],str(a.text).encode("utf-8"),link)
 
-while 1:
+"""while 1:
 	crawe = ["00:00","8:42","9:15","11:35","14:00","15:13","18:17","20:13"]
 	if str(time.strftime("%H:%M")) in crawe:
 		crawl()
+		
+	elif str(time.strftime("%M")) =="00":
+		streamfiyat()"""
+crawl()
+streamfiyat()

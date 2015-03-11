@@ -20,6 +20,7 @@ first = [	"CREATE TABLE spectrum(sira INTEGER PRIMARY KEY AUTOINCREMENT, giri,li
 			"CREATE TABLE aljazeera(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
 			"CREATE TABLE reuters(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
 			"CREATE TABLE timemag(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
+			"CREATE TABLE streamfiyat(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
 			"CREATE TABLE test(deger,zaman)"]
 
 tables = []

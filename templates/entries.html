@@ -5,6 +5,14 @@
 
 <div class=page>
     {% if data %}
+    
+    <div class=streamfiyat>
+    <h1>Streamfiyat</h1>
+    {% for message in data["streamfiyat"] %}    
+          <h2>#{{ message[0]}} {{message[1]}} @ {{message[3].split(" ")[0]}}</a></h2>
+          {% endfor %}
+          <br>
+          </div>
 
        <div class=entries>
           <div class=spectrum>
