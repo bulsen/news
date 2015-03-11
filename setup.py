@@ -101,4 +101,7 @@ end script
 """
 fw(path,initscr)
 
+location = os.getcwd()
+os.system("mv %s/* /home/www/flask_project"%location)
+os.system("cd /home/www/flask_project && chown -R newuser *")
 print "add rc.local sudo service newscrawler start"

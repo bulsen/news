@@ -2,19 +2,10 @@ body            { font-family: sans-serif }
 a, h1, h2       { color: #000000; text-decoration: none; }
 h1				{ font-size: 2.8em; color:#E55300; }
 h1, h2          { font-family: 'Georgia', serif; margin: 0; }
-h1            { border-bottom: 5px solid #ffffff; }
+h1				{ border-bottom: 5px solid #ffffff; }
 h2              { font-size: 1.73em; }
 h4				{ font-family:'Georgia';font-size: 1.07em; }
 
 .page           { margin: 5em auto; width: 35em; background: white; }
 .entries        { list-style: none; margin: 0; padding: 0; }
-.entries li     { margin: 0.8em 1.2em; }
-.entries li h2  { margin-left: -1em; }
-.add-entry      { font-size: 0.9em }
-.add-entry dl   { font-weight: bold; }
-.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
-                  margin-bottom: 1em; background: #fafafa; }
-.flash          { background: #cee5F5; padding: 0.5em;
-                  border: 1px solid #aacbe2; }
-.error          { background: #f0d6d6; padding: 0.5em; }
 .ebenkeller		{ text-align:center; }
