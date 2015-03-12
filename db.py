@@ -5,23 +5,23 @@ sys.setdefaultencoding("utf-8")
 
 path = os.getcwd()+"/"
 
-date = time.strftime("%d.%m.%y")
+date = time.strftime("%d%m%y")
 #sql connection
-con = sqlite3.connect(path+"databases/"+"feed"+date,check_same_thread=False)
-first = [	"CREATE TABLE spectrum(sira INTEGER PRIMARY KEY AUTOINCREMENT, giri,link,zaman)",
-			"CREATE TABLE ycombinator(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE newyorker(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE verge(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE arstechnica(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE bbc(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE nature(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE cell(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE guardian(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE aljazeera(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE reuters(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE timemag(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE streamfiyat(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)",
-			"CREATE TABLE test(deger,zaman)"]
+con = sqlite3.connect(path+"databases/"+"feed",check_same_thread=False)
+first = [	"CREATE TABLE spectrum%s(sira INTEGER PRIMARY KEY AUTOINCREMENT, giri,link,zaman)"%date,
+			"CREATE TABLE ycombinator%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE newyorker%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE verge%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE arstechnica%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE bbc%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE nature%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE cell%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE guardian%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE aljazeera%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE reuters%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE timemag%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE streamfiyat%s(sira INTEGER PRIMARY KEY AUTOINCREMENT,giri,link,zaman)"%date,
+			"CREATE TABLE test%s(deger,zaman)"%date]
 
 tables = []
 for elems in first:
