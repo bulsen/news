@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import sys , requests, bs4, db, time
+import sys , requests, bs4, db, time,re
 reload(sys)
 sys.setdefaultencoding("utf-8")
 
@@ -19,9 +19,10 @@ def streamfiyat():
 
 	arr=[]
 	for elems in bs.find_all("span"):
-		arr.append(elems.text)
+		if re.match("[0-9][0-9][0-9]\,[0-9]*",elems.match)
+			arr.append(elems.text)
 
-	db.pushc("streamfiyat",arr[87],"lol")
+	db.pushc("streamfiyat",arr[1],"lol")
 
 def crawl():
 
